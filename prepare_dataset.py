@@ -20,7 +20,7 @@ from transformers import (
 @dataclass
 class RagExampleArguments:
     csv_path: str = field(
-        default=str(Path(__file__).parent / "test_data" / "brazil_knowledge_dataset.csv"),
+        default=str(Path(__file__).parent / "retrieval_data.csv"),
         metadata={"help": "Path to a comma-separated csv file with columns 'title' and 'text'"},
     )
     question: Optional[str] = field(
@@ -28,11 +28,11 @@ class RagExampleArguments:
         metadata={"help": "Question that is passed as input to RAG. Default is 'What does Moses' rod turn into ?'."},
     )
     rag_model_name: str = field(
-        default="facebook/rag-token-nq",
+        default="facebook/rag-sequence-nq",
         metadata={"help": "The RAG model to use. Either 'facebook/rag-sequence-nq' or 'facebook/rag-token-nq'"},
     )
     dpr_ctx_encoder_model_name: str = field(
-        default="facebook/rag-token-nq",
+        default="facebook/rag-sequence-nq",
         metadata={
             "help": (
                 "The DPR context encoder model to use. Either 'facebook/dpr-ctx_encoder-single-nq-base' or"
@@ -113,7 +113,7 @@ def main(
     index_hnsw_args: "IndexHnswArguments",
 ):
     ######################################
-    logger.info("Step 1 - Create the dataset")
+    #logger.info("Step 1 - Create the dataset")
     ######################################
 
     # The dataset needed for RAG must have three columns:
@@ -154,7 +154,7 @@ def main(
     # dataset = load_from_disk(passages_path)  # to reload the dataset
 
     ######################################
-    logger.info("Step 2 - Index the dataset")
+    #logger.info("Step 2 - Index the dataset")
     ######################################
 
     # Let's use the Faiss implementation of HNSW for fast approximate nearest neighbor search
@@ -167,8 +167,6 @@ def main(
     # dataset.load_faiss_index("embeddings", index_path)  # to reload the index
 
 if __name__ == "__main__":
-    logging.basicConfig(level=logging.WARNING)
-    logger.setLevel(logging.INFO)
 
     parser = HfArgumentParser((RagExampleArguments, ProcessingArguments, IndexHnswArguments))
     rag_example_args, processing_args, index_hnsw_args = parser.parse_args_into_dataclasses()
