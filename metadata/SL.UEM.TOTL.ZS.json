@@ -1,0 +1,23 @@
+[
+    {
+        "id": "SL.UEM.TOTL.ZS",
+        "name": "Unemployment, total (% of total labor force) (modeled ILO estimate)",
+        "unit": "",
+        "source": {
+            "id": "2",
+            "value": "World Development Indicators"
+        },
+        "sourceNote": "Unemployment refers to the share of the labor force that is without work but available for and seeking employment.",
+        "sourceOrganization": "International Labour Organization. \u201cILO Modelled Estimates and Projections database (ILOEST)\u201d ILOSTAT. Accessed February 06, 2024. https://ilostat.ilo.org/data/.",
+        "topics": [
+            {
+                "id": "4",
+                "value": "Education "
+            },
+            {
+                "id": "10",
+                "value": "Social Protection & Labor"
+            }
+        ]
+    }
+]

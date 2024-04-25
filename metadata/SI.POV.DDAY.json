@@ -1,0 +1,27 @@
+[
+    {
+        "id": "SI.POV.DDAY",
+        "name": "Poverty headcount ratio at $2.15 a day (2017 PPP) (% of population)",
+        "unit": "",
+        "source": {
+            "id": "2",
+            "value": "World Development Indicators"
+        },
+        "sourceNote": "Poverty headcount ratio at $2.15 a day is the percentage of the population living on less than $2.15 a day at 2017 purchasing power adjusted prices. As a result of revisions in PPP exchange rates, poverty rates for individual countries cannot be compared with poverty rates reported in earlier editions.",
+        "sourceOrganization": "World Bank, Poverty and Inequality Platform. Data are based on primary household survey data obtained from government statistical agencies and World Bank country departments. Data for high-income economies are mostly from the Luxembourg Income Study database. For more information and methodology, please see http://pip.worldbank.org.",
+        "topics": [
+            {
+                "id": "11",
+                "value": "Poverty "
+            },
+            {
+                "id": "2",
+                "value": "Aid Effectiveness "
+            },
+            {
+                "id": "19",
+                "value": "Climate Change"
+            }
+        ]
+    }
+]
