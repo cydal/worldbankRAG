@@ -1,6 +1,8 @@
+import os
 import json
 import glob2
 import requests
+import pandas as pd
 import google.generativeai as genai 
 
 
